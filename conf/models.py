@@ -9,7 +9,7 @@ class Person(models.Model):
     surname = models.CharField(verbose_name='Отчество', max_length=100)
     photo = models.ImageField(verbose_name='Фотография', upload_to='photo/', blank=True, null=True)
     birthday = models.DateField(verbose_name='Дата рождения')
-    country = CountryField(verbose_name='Старна')
+    country = CountryField(verbose_name='Старна', default='BY')
     organization = models.OneToOneField('Organization', verbose_name='Организация', on_delete=models.CASCADE)
 
     class Meta:
